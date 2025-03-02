@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-API_KEY = "AIzaSyC_WQRG1JmV42vlZfA04gRb3IGj3KgpZqI"
+API_KEY = "AIzaSyBxDC6r-G42icC9K00XCpXIyR45hXhSQDA"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"
 
 class Query(BaseModel):
@@ -64,7 +64,7 @@ def refiner(text: str):
 def summarise(text: str):
     data = {
         "contents": [{
-            "parts": [{"text": "You are now a text summariser and you have to give the summary of a text that you will be given and you have to return a summary in a paragraph not more than 100 words.The text is:" + text}]
+            "parts": [{"text": "You are now a text summariser and you have to give the summary of a text that you will be given and you have to return a summary in a paragraph not more than 100 words.If the text itself is less than 100 words then summarise in same amount of words.The text is:" + text}]
         }]
     }
 
