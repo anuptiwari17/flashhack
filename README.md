@@ -57,9 +57,10 @@ In the digital era, managing large amounts of textual data efficiently is a chal
 5. View the AI-generated results instantly.
 
 ## Contributors
-- [Your Name]
-- [Team Member 1]
-- [Team Member 2]
+- Kartik Sirohi 
+- Manan Bansal
+- Atharv Dubey
+- Anup Tiwari
 
 ## Repository
 Find the source code on GitHub: [GigaText GitHub Repository](https://github.com/anuptiwari17/flashhack)
