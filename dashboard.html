@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashstyles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="user-menu">
+                <button class="btn logout">Logout</button>
+                <div class="user-avatar">U</div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <div class="dashboard-header">
+            <h2>Categories</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="card" data-id="1">
+                <div class="card-image">Category Image 1</div>
+                <div class="card-content">
+                    <h3 class="card-title">Text Summarizer</h3>
+                    <p class="card-description">Summarize text powered by AI.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Popular Choice</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-id="2">
+                <div class="card-image">Category Image 2</div>
+                <div class="card-content">
+                    <h3 class="card-title">Text Sentiment Analyzer</h3>
+                    <p class="card-description">Analyze the sentiment in a blink.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Trending</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="3">
+                <div class="card-image">Category Image 3</div>
+                <div class="card-content">
+                    <h3 class="card-title">Text Refiner</h3>
+                    <p class="card-description">Refine text</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Trending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Modal -->
+    <div class="card-modal" id="cardModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Category Title</h2>
+                <p class="modal-subtitle">Detailed information about this category</p>
+            </div>
+            <div class="modal-image">Category Image</div>
+            <div class="modal-description">
+                <p>This is a detailed description of the category. It provides more information about what you can expect to learn and the types of projects you can build.</p>
+                <p>You will gain hands-on experience with real-world applications and develop skills that are in high demand in the industry.</p>
+            </div>
+            <div class="modal-details">
+                <h3>What you'll learn:</h3>
+                <ul id="modalDetailsList">
+                    <!-- This will be populated dynamically -->
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary">Back to Categories</button>
+                <button class="btn btn-primary">Explore Projects</button>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    
+
+    <!-- JavaScript -->
+    <script src="dashscript.js"></script>
+</body>
+</html>

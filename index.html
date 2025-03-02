@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- You can add more CDN links here if needed -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Project Name</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Giga</h2>
+                <p>A brief description of what your project does and the problem it solves.</p>
+                <div class="cta-buttons">
+                    <button class="btn primary-btn">Log In</button>
+                    <button class="btn secondary-btn">Sign Up</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-img"><video src="writing_expert_first_x2.mp4" autoplay loop muted style="width: 100%;"></video></div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Text Summarizer</h3>
+                    <p>An in-depth summarizer powered by AI</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Text Sentiment Analyzer</h3>
+                    <p>A text sentiment analyzer feature that</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Text Refiner</h3>
+                    <p> Fix grammatical, spelling and logical errors in paragraphs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cogs feature-icon"></i>
+                    <h3>Feature Four</h3>
+                    <p>Description of your fourth key feature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About The Project</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Detailed information about your project, the problem it solves, and how it works. You can explain the technology stack and implementation details here.</p>
+                    <p>Add more paragraphs as needed to fully explain your project and its benefits.</p>
+                </div>
+                <div class="about-image">
+                    <!-- You can add an image here -->
+                    <div class="placeholder-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hackathon Project. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
