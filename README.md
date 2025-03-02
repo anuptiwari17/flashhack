@@ -26,7 +26,7 @@ In the digital era, managing large amounts of textual data efficiently is a chal
 ## Installation & Setup
 ### Prerequisites
 - Python 3.8+
-- Node.js (for frontend, if required)
+- FASTAPI
 - Firebase account for authentication setup
 
 ### Steps to Run Locally
