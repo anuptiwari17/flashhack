@@ -4,17 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giga Text</title>
-   <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Giga Text</h1>
-    <textarea id="inputText" placeholder="Enter your text here..."></textarea><br>
-    <button class="btn" id="refine">Refine Text</button>
-    <button class="btn" id="sentiment">Get Sentiment</button>
-    <button class="btn" id="summary">Summarise</button>
-    <center>
-    <div id="output"></div>
-</center>
+    <div class="container">
+        <header>
+            <h1>Giga Text <i class="fas fa-text-height"></i></h1>
+            <p class="tagline">Transform your text with AI-powered tools</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <div class="card input-card">
+                <div class="input-container">
+                    <label for="inputText">Your Text</label>
+                    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn" id="refine">
+                        <i class="fas fa-magic"></i> Refine Text
+                    </button>
+                    <button class="btn" id="sentiment">
+                        <i class="fas fa-smile"></i> Get Sentiment
+                    </button>
+                    <button class="btn" id="summary">
+                        <i class="fas fa-compress-alt"></i> Summarize
+                    </button>
+                </div>
+            </div>
+            
+            <div class="output-container card">
+                <div class="output-header">
+                    <h3>Results</h3>
+                    <button id="copyResult" class="icon-btn">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div id="outputContent">
+                    <p class="placeholder-text">Your results will appear here...</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by advanced text processing algorithms</p>
+        </footer>
+    </div>
+    
+    <script src="main.js" type="module"></script>
+    <script src="ui.js"></script>
 </body>
-<script src="main.js" type="module"></script>
 </html>
