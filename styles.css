@@ -175,7 +175,6 @@ nav ul li a.active::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ef 100%);
     padding: 100px 0;
 }
 
@@ -225,9 +224,7 @@ nav ul li a.active::after {
     font-size: 1.2rem;
 }
 
-.placeholder-img::after {
-    content: "Image Placeholder";
-}
+
 
 /* Features Section */
 .features {
