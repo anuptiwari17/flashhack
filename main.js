@@ -38,7 +38,7 @@ async function getSentiment(inputText) {
     }
 }
 
-//Function to call summary API
+// Function to call the Summary API
 async function getSummary(inputText) {
     try {
         const response = await fetch(`${API_BASE_URL}/summarizer`, {
@@ -52,58 +52,66 @@ async function getSummary(inputText) {
         const data = await response.json();
         return data.response || data.error;
     } catch (error) {
-        console.error("Error fetching sentiment analysis:", error);
-        return "Error analyzing sentiment.";
+        console.error("Error fetching summary:", error);
+        return "Error summarizing text.";
     }
 }
 
-
 // Select elements
-const output = document.getElementById("output");
-const inputField = document.getElementById("inputText"); // Fix input field ID
+const outputDiv = document.getElementById("output");
+const inputField = document.getElementById("inputText");
+
+// Hide output initially
+outputDiv.style.display = "none";
+
+// Function to display output
+function displayOutput(text) {
+    if (text.trim() !== "") {
+        outputDiv.textContent = text;
+        outputDiv.style.display = "block"; // Show output box
+    } else {
+        outputDiv.style.display = "none"; // Hide output box when empty
+    }
+}
 
 // Event Listener for Refining
 document.getElementById("refine").addEventListener("click", async () => {
-    const inputText = inputField.value.trim(); // Get input value
+    const inputText = inputField.value.trim();
 
     if (inputText === "") {
         alert("Please enter text to refine.");
         return;
     }
 
-    // Call API and update output
-    output.textContent = "Refining...";
+    displayOutput("Refining...");
     const refinedText = await refineText(inputText);
-    output.textContent = refinedText;
+    displayOutput(refinedText);
 });
 
 // Event Listener for Sentiment Analysis
 document.getElementById("sentiment").addEventListener("click", async () => {
-    const inputText = inputField.value.trim(); // Get input value
+    const inputText = inputField.value.trim();
 
     if (inputText === "") {
-        alert("Please enter email to analyze.");
+        alert("Please enter text to analyze.");
         return;
     }
 
-    // Call API and update output
-    output.textContent = "Analyzing sentiment...";
+    displayOutput("Analyzing sentiment...");
     const sentiment = await getSentiment(inputText);
-    output.textContent = sentiment;
+    displayOutput(sentiment);
 });
 
-//Event listener for summariser
+// Event Listener for Summarizer
 document.getElementById("summary").addEventListener("click", async () => {
-    const inputText = inputField.value.trim(); // Get input value
+    const inputText = inputField.value.trim();
 
     if (inputText === "") {
-        alert("Please enter text to refine.");
+        alert("Please enter text to summarize.");
         return;
     }
 
-    // Call API and update output
-    output.textContent = "Summarising...";
-    const sum = await getSummary(inputText);
-    output.textContent = sum;
+    displayOutput("Summarizing...");
+    const summary = await getSummary(inputText);
+    displayOutput(summary);
 });
-
